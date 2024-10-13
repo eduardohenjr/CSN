@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pesquisa de Chapas - LTF</title>
+</head>
+<body>
+    <!-- Barra superior com o logo e título -->
+    <div class="bar">
+        <div class="logo-title">
+            <img src="imgs/logo_csn_branco.png" alt="Logo" class="logo">
+            <h1>Corte de descarte - LTF</h1>
+        </div>
+    </div>
+
+    <!-- Botão para selecionar o arquivo CSV -->
+    <div class="file-selector">
+        <button id="selectFileButton" class="btn btn-primary">Selecionar Arquivo CSV</button>
+        <p id="selectedFilePath" class="file-path"></p>
+    </div>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Caixa de pesquisa e botão de busca -->
+        <div class="search-container">
+            <input type="text" placeholder="Pesquisar código da chapa..." class="search-bar" id="searchInput">
+            <button id="searchButton" class="btn btn-success">Buscar</button>
+        </div>
+
+        <!-- Div para exibir os resultados da pesquisa -->
+        <div id="output" class="output-container">
+            <!-- Mensagem de erro caso não haja resultados ou ocorra um problema -->
+            <p id="errorMessage" class="error-message" style="display: none;">Nenhum dado encontrado para o código especificado.</p>
+
+            <!-- Container dos dados obtidos da chapa -->
+            <div class="sheet-data">
+                <h2>Resultados da Pesquisa</h2>
+                <!-- Exibição de cada campo obtido do backend -->
+                <p id="length" class="data-item"><strong>Comprimento:</strong> <span></span></p>
+                <p id="weight" class="data-item"><strong>Peso:</strong> <span></span></p>
+                <p id="defects" class="data-item"><strong>Defeitos:</strong> <span></span></p>
+                <p id="cuts" class="data-item"><strong>Cortes:</strong> <span></span></p>
+                <p id="weightLoss" class="data-item"><strong>Perda de material:</strong> <span></span></p>
+                <hr>
+                <p id="new_length" class="data-item"><strong>Comprimento pós corte:</strong> <span></span></p>
+                <p id="new_weight" class="data-item"><strong>Peso pós corte:</strong> <span></span></p>
+                <img id="graph" src="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Marca d'água no rodapé -->
+    <div class="watermark">
+        <img src="imgs/logo-csn-preto.png" alt="Logo" class="watermark-logo">
+    </div>
+
+    <!-- Script para carregar o arquivo renderer.js que lida com o frontend -->
+    <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Sem defeitos
+010952501_01
+
+Defeituosa no meio
+D927110400
+
+Defeito nas duas extremidades
+D644820200
+
+Defeitos apenas na extremidade esquerda
+D769420500
+
+Defeitos apenas na extremidade direita
+D769220200
